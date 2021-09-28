@@ -59,7 +59,7 @@ class PlayModel(_SharedModel):
     gather_subset: Optional[bool]
     gather_timeout: Optional[int]
     handlers: Optional[TasksListModel]
-    hosts: str  # REQUIRED
+    hosts: Union[str, List[str]]  # REQUIRED
     max_fail_percentage: Optional[float]
     order: Optional[
         Literal["default", "sorted", "reverse_sorted", "reverse_inventory", "shuffle"]
